@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - npm install -g serverless
+      - npm install
+
+  build:
+    commands:
+      - serverless deploy
+
+artifacts:
+  files: 
+    - serverless.yml
